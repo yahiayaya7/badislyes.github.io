@@ -11,6 +11,7 @@
  function signin() {
    blockstack.redirectToSignIn()
  }
+ 
   function showProfile(profile) {
    var person = new blockstack.Person(profile)
    document.getElementById('heading-name').innerHTML = person.name()
@@ -34,6 +35,7 @@
  <form align="center">
 <h2 align="center"> welcome.... clik login to enter the application</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
+  <p id="heading-name"></p>
  </form>
 </body>
 </html>
