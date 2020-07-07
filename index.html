@@ -14,7 +14,7 @@
  
   function showProfile(profile) {
    var person = new blockstack.Person(profile)
-   document.write('marhbabik khoya'+person.name());
+   document.write('marhbabik khoya'+person.name()+person.avatarUrl());
    var x=document.getElementById('z1');
    x.innerHTML =person.name();
    document.getElementById('avatar-image').setAttribute('src', person.avatarUrl())
