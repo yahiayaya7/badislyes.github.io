@@ -14,12 +14,11 @@
  
   function showProfile(profile) {
    var person = new blockstack.Person(profile)
-   document.write('marhbabik khoya'+person.name()+person.avatarUrl());
-   var x=document.getElementById('z1');
-   x.innerHTML =person.name();
-   document.getElementById('avatar-image').setAttribute('src', person.avatarUrl())
-   document.getElementById('section-1').style.display = 'none'
-   document.getElementById('section-2').style.display = 'block'
+   document.write('marhbabik khoya '+person.name());
+   (document.getElementById('nom')).innerHTML =person.name();
+   (document.getElementById('avatar-image')).setAttribute('src', person.avatarUrl());
+   //document.getElementById('section-1').style.display = 'none'
+   //document.getElementById('section-2').style.display = 'block'
  }
 
  if (blockstack.isUserSignedIn()) {
@@ -38,7 +37,7 @@
  
 <h2 align="center"> welcome.... clik login to enter the application</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
-  <p id="z1"> nom et prenom</p>
+  <p id="nom"> </p>
  <img id="avatar-image"  width="300" height="300"/>
 </body>
 </html>
