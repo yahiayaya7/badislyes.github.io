@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> bstackapp</title>
+
+<link rel="manifest" href="manifest.json"/>
+<script src="blockstack.js" >
+</script>
+
+<script type = "text/javascript"  >
+
+ function signin() {
+   blockstack.redirectToSignIn()
+ }
+ 
+</script>
+</head>
+<body>
+
+<input type="button" value="log" id="sig" onclick="signin();" />
+
+</body>
+</html>
