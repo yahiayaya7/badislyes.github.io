@@ -47,10 +47,11 @@
    })
  }
  }
- function fnbfile()
- {var x=blockstack.listFiles();
-  document.getElementById("pnbf").innerHTML =x.valueOf();
- }
+ function sharef()
+  {var tpost=document.getElementById("post").value;
+   document.getElementById("state").innerHTML =tpost;
+  }
+ 
 </script>
 </head>
 <body>
@@ -61,8 +62,10 @@
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
  <input align="center" type="button" value="isgned" id="issigned" onclick="issigin();" />
  <p id="state"> </p>
-  <input align="center" type="button" value="nb files" id="bnbf" onclick="fnbfile();" />
- <p id="pnbf"> </p>
+   <p > publish some text </p>
+ <input align="center" type="text"  id="post" " />
+ <input align="center" type="button" value="share" id="shareb" onclick="sharef();" />
+ 
   
   <img id="avatar-image" src="" width="300" height="300"/>
 
