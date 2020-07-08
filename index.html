@@ -49,7 +49,7 @@ alert(err.message);}
  
   function showf()
   {let options = {
-  encrypt: false
+  decrypt: false
 }
    try{var t= blockstack.getFile('/publication.txt', options);
   document.getElementById("posted").innerHTML=t.valueOf();}
