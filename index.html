@@ -52,7 +52,7 @@ alert(err.message);}
   decrypt: false
 }
    try{var t= blockstack.getFile('/publication.txt', options);
-  document.getElementById("posted").innerHTML=t.valueOf();}
+  document.getElementById("posted").innerHTML=t.resolve();}
    
  catch(err){
 alert(err.message);}
