@@ -52,7 +52,7 @@
    document.getElementById("state").innerHTML =tpost;
     blockstack.putFile('publication', tpost);}
     showf()
- {var t= blockstack.putFile('publication');
+ {var t= blockstack.getFile('publication');
   document.getElementById("posted").innerHTML =t;
  }
 </script>
