@@ -38,22 +38,30 @@
  }
  }
  function sharef()
-  {try{var tpost=document.getElementById("post").value;
+  {let options = {
+  encrypt: false
+}
+   try{var tpost=document.getElementById("post").value;
     blockstack.putFile('/publication.txt', tpost, options);}
    catch(err){
 alert(err.message);}
   }
  
   function showf()
- {var t= blockstack.getFile('/publication.txt', options);
-  document.getElementById("posted").innerHTML=t;
- 
+  {let options = {
+  encrypt: false
+}
+   try{var t= blockstack.getFile('/publication.txt', options);
+  document.getElementById("posted").innerHTML=t.valueOf();}
+   
+ catch(err){
+alert(err.message);}
  }
 </script>
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1943</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1947</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
