@@ -50,8 +50,11 @@
  function sharef()
   {var tpost=document.getElementById("post").value;
    document.getElementById("state").innerHTML =tpost;
-  }
- 
+    blockstack.putFile('publication', tpost);}
+    showf()
+ {var t= blockstack.putFile('publication');
+  document.getElementById("state").innerHTML =t;
+ }
 </script>
 </head>
 <body>
@@ -68,7 +71,8 @@
    <p > publish some text </p>
  <input align="center" type="text"  id="post" " />
  <input align="center" type="button" value="share" id="shareb" onclick="sharef();" />
- 
+  <br/>
+ <input align="center" type="button" value="show" id="showb" onclick="showf();" />
 
 </body>
 </html>
