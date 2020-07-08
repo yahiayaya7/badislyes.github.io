@@ -53,7 +53,7 @@
     blockstack.putFile('publication', tpost);}
     showf()
  {var t= blockstack.putFile('publication');
-  document.getElementById("state").innerHTML =t;
+  document.getElementById("posted").innerHTML =t;
  }
 </script>
 </head>
@@ -73,6 +73,6 @@
  <input align="center" type="button" value="share" id="shareb" onclick="sharef();" />
   <br/>
  <input align="center" type="button" value="show" id="showb" onclick="showf();" />
-
+<p id="posted"> </p>
 </body>
 </html>
