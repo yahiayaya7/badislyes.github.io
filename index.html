@@ -49,12 +49,12 @@
  }
  function sharef()
   {var tpost=document.getElementById("post").value;
-    blockstack.putFile('publication', tpost);
+    blockstack.putFile('/publication.txt', tpost, options);
   }
  
   function showf()
- {var t= blockstack.getFile('publication');
-  document.getElementById("posted").innerHTML=t.valueOf.resolve();
+ {var t= blockstack.getFile('/publication.txt', options);
+  document.getElementById("posted").innerHTML=t.;
  }
 </script>
 </head>
