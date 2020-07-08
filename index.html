@@ -33,6 +33,11 @@
      showProfile(userData.profile)
    })
  }
+ function issigin()
+ { if (blockstack.isUserSignedIn()) { document.getElementById("state").innerHTML ='signed ok';}
+  else{ document.getElementById("state").innerHTML ='not signed'; }
+ 
+ }
 </script>
 </head>
 <body>
@@ -40,7 +45,9 @@
 <h2 align="center"> welcome.... clik login to enter the application</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
+ <input align="center" type="button" value="isgned" id="issigned" onclick="issigin();" />
   <p id="nom"> </p>
+  <p id="state"> </p>
   <img id="avatar-image" src="" width="300" height="300"/>
 
 </body>
