@@ -49,9 +49,10 @@
  }
  function sharef()
   {var tpost=document.getElementById("post").value;
-   document.getElementById("state").innerHTML =tpost;
-    blockstack.putFile('publication', tpost);}
-    showf()
+    blockstack.putFile('publication', tpost);
+  }
+ 
+  showf()
  {var t= blockstack.getFile('publication');
   document.getElementById("posted").innerHTML ='zzzz';
  }
