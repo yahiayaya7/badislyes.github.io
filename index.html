@@ -36,7 +36,16 @@
  function issigin()
  { if (blockstack.isUserSignedIn()) { document.getElementById("state").innerHTML ='signed ok';}
   else{ document.getElementById("state").innerHTML ='not signed'; }
- 
+  if (blockstack.isUserSignedIn()) {
+  
+  const userData = blockstack.loadUserData()
+   showProfile(userData.profile)
+ } else if (blockstack.isSignInPending()) {
+   blockstack.handlePendingSignIn()
+   .then(userData => {
+     showProfile(userData.profile)
+   })
+ }
  }
 </script>
 </head>
