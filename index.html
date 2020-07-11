@@ -78,11 +78,14 @@ alert(err.message);
  catch(err){
 alert(err.message);}
  }
+ function showof(){ 
+  document.getElementById("posteo").innerHTML=document.getElementById("posttoshowo").value+document.getElementById("idother").value
+ }
 </script>
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1256</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1802</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
@@ -102,15 +105,24 @@ alert(err.message);}
 <p> here your post </p> 
  <p id="posted"></p>
   <br/> 
-  <p> list of files  </p>              
+  <p> list of posts  </p>              
   <br/> 
    <input align="center" type="button" value="listfiles" id="listb" onclick="listf();" />           
   <br/> 
      <br/> 
-  <p> delete file  </p>              
+  <p> delete post  </p>              
   <br/>
    <input align="center" type="text"  id="posttodelete" " />
    <input align="center" type="button" value="delete" id="deleteb" onclick="deletef();" />           
   <br/>                                                                                  
-</body>
+<p > show a postof other user </p>
+  <br/>
+ <p>idof other user</p> 
+ <input align="center" type="text"  id="idother" />
+ <p>idof the post to show</p>
+ <input align="center" type="text"  id="posttoshowo" />
+ <input align="center" type="button" value="show" id="showbo" onclick="showof();" />
+<p> here your post </p> 
+ <p id="posteo"></p>
+ </body>
 </html>
