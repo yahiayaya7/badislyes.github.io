@@ -64,11 +64,17 @@ alert(err.message);}
  function listf(){ blockstack.listFiles((filename)=>{document.write(filename)
          return true})
   }
+ function deletef(){
+  var filetodelete=document.getElementById("posttodelete").innerHTML;
+ try{ blockstack.deleteFile(filetodelete,options)}
+ catch(err){
+alert(err.message);}
+ }
 </script>
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1135</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1148</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
@@ -88,6 +94,12 @@ alert(err.message);}
   <p> list of files  </p>              
   <br/> 
    <input align="center" type="button" value="listfiles" id="listb" onclick="listf();" />           
-  <br/>            
+  <br/> 
+     <br/> 
+  <p> delete file  </p>              
+  <br/>
+   <input align="center" type="text"  id="posttodelete" " />
+   <input align="center" type="button" value="delete" id="deleteb" onclick="deletef();" />           
+  <br/>                                                                                  
 </body>
 </html>
