@@ -84,7 +84,8 @@ alert(err.message);}
   var p=document.getElementById("posttoshowo").value;
   var id=document.getElementById("idother").value;
   let options = {
-  username:id
+  username:id;
+   decrypt:false;
   }
  
   try{var t= await blockstack.getFile(p, options);
@@ -96,7 +97,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 2050</h2>
+<h2 align="center"> welcome.... clik login to enter the application 2053</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
