@@ -55,7 +55,8 @@ alert(err.message);}
   async function showf()
   {let options = {
   decrypt: false}
-   try{var t= await blockstack.getFile('/post2.txt', options);
+  var filetoshow=document.getElementById("posttoshow").value;
+   try{var t= await blockstack.getFile(filetoshow, options);
   document.getElementById("posted").innerHTML=t}
    
  catch(err){
@@ -77,7 +78,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1203</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1212</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
@@ -90,6 +91,9 @@ alert(err.message);}
  <input align="center" type="text"  id="post" " />
  <input align="center" type="button" value="share" id="shareb" onclick="sharef();" />
   <br/>
+ <p > show a post </p>
+  <br/>
+ <input align="center" type="text"  id="posttoshow" />
  <input align="center" type="button" value="show" id="showb" onclick="showf();" />
 <p> here your post </p> 
  <p id="posted"></p>
