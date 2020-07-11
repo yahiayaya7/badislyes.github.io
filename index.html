@@ -82,8 +82,9 @@ alert(err.message);}
   var p=document.getElementById("posttoshowo").value;
   var id=document.getElementById("idother").value;
   let options = {
-  decrypt:false;
-  username:id}
+  username:id;
+   decrypt:false
+  }
    try{var t= await blockstack.getFile(p, options);
   document.getElementById("posteo").innerHTML=t}
    
