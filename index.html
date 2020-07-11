@@ -43,8 +43,8 @@
 }
    try{var tpost=document.getElementById("post").value;
        var d=new Date;
-       var dd = d.toDateString();
-       var dt = d.toTimeString();
+       var dd = d.toLocaleDateString();
+       var dt = d.toLocaleTimeString();
        var filename='post'+dd+dt+'.txt';
        document.getElementById("post").value=filename;
     blockstack.putFile('/post2.txt', tpost, options);}
