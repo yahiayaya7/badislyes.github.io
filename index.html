@@ -43,9 +43,9 @@
 }
    try{var tpost=document.getElementById("post").value;
        var d=new Date;
-       var dd = d.toString();
-       var dt = d.toLocaleTimeString();
-       var filename='post'+dd+dt+'.txt';
+       var dd = d.getDate()+d.getMonth()+d.getFullYear();
+      
+       var filename='post'+dd+'.txt';
        document.getElementById("post").value=filename;
     blockstack.putFile('/post2.txt', tpost, options);}
    catch(err){
@@ -68,7 +68,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1113</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1127</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
