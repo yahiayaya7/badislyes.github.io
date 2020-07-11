@@ -42,7 +42,7 @@
   encrypt: false
 }
    try{var tpost=document.getElementById("post").value;
-    blockstack.putFile('/publication.txt', tpost, options);}
+    blockstack.putFile('/post2.txt', tpost, options);}
    catch(err){
 alert(err.message);}
   }
@@ -50,7 +50,7 @@ alert(err.message);}
   async function showf()
   {let options = {
   decrypt: false}
-   try{var t= await blockstack.getFile('/publication.txt', options);
+   try{var t= await blockstack.getFile('/post2.txt', options);
   document.getElementById("posted").innerHTML=t}
    
  catch(err){
@@ -63,7 +63,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1044</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1048</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
