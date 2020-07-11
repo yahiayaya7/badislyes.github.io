@@ -45,7 +45,7 @@
        var d=new Date;
        var dd = d.getDate().toString()+d.getMonth().toString()+d.getFullYear().toString()+d.getHours().toString()+d.getMinutes().toString()+d.getSeconds().toString();
       
-       var filename='/post'+dd+'.txt';
+       var filename='post'+dd+'.txt';
        document.getElementById("post").value=filename;
     blockstack.putFile(filename, tpost, options);
        document.getElementById("post").value=await blockstack.getFileUrl(filename, options);}
@@ -82,7 +82,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1250</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1256</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
