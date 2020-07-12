@@ -90,10 +90,10 @@ alert(err.message);}
   decrypt:false 
     }
  options.username=id;
-  const ud=blockstack.loadUserData();
- // options.zoneFileLookupURL=ud.hubUrl;
-     try{//var t= await blockstack.getFile(p, options);
-    document.getElementById("posteo").innerHTML=ud.hubUrl.GaiaHubConfig.url_prefix;}
+ options.app='https://badislyes.github.io/'
+     try{var t= await blockstack.getFile(p, options);
+   document.getElementById("posteo").innerHTML=t;
+        }
     catch(err){
      alert(err.message);}
 }
