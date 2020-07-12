@@ -90,7 +90,7 @@ alert(err.message);}
   decrypt:false 
     }
  options.username=id;
-  var pr=await lookupProfile(id);
+  var pr=await blockstack.lookupProfile(id);
   try{document.getElementById("posteo").innerHTML=pr;}
   catch(err){
      alert(err.message);}
@@ -103,7 +103,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1119</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1123</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
