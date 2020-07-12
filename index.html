@@ -92,7 +92,7 @@ alert(err.message);}
  options.username=id;
  
   try{ var pr=await blockstack.lookupProfile(id);
-      document.write(pr);}
+      document.write(pr.toJSON());}
   catch(err){
      alert(err.message);}
     /*try{var t= await blockstack.getFile(p, options);
