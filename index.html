@@ -8,7 +8,7 @@
 
 <script language = "javascript" type = "text/javascript"  >
 var appConfig = new blockstack.AppConfig({scopes:['store_write', 'publish_data']});
- //var userSession = new blockstack.UserSession({ appConfig: appConfig });
+ var userSession = new blockstack.UserSession({ appConfig: appConfig });
  
  function signin() {
    blockstack.redirectToSignIn();
@@ -91,9 +91,9 @@ alert(err.message);}
   var p=document.getElementById("posttoshowo").value;
   var id=document.getElementById("idother").value;
   
- const options = { username: 'lyesdz2020.id.blockstack', decrypt: false, zoneFileLookupURL: 'https://core.blockstack.org/v1/names/' }
 
-     try{var t= await blockstack.getFile(p, options);
+
+     try{var t= await blockstack.getFile(p, { username: 'id', decrypt: false });
    document.getElementById("posteo").innerHTML=t;
         }
     catch(err){
@@ -103,7 +103,7 @@ alert(err.message);}
 </head>
 <body>
 
-<h2 align="center"> welcome.... clik login to enter the application 1626</h2>
+<h2 align="center"> welcome.... clik login to enter the application 1705</h2>
 <input align="center" type="button" value="login" id="sig" onclick="signin();" />
  <p id="nom"> </p>
  <input align="center" type="button" value="signout" id="sout" onclick="sigout();" />
