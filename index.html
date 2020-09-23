@@ -64,7 +64,7 @@ alert(err.message);}
  
   async function showf()
   {let options = {
-  decrypt: false}
+  decrypt: true}
   
   var filetoshow=document.getElementById("posttoshow").value;
    try{var t= await blockstack.getFile(filetoshow, options);
